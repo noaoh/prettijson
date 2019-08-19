@@ -25,7 +25,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             j = req.get_json()
             prettified_json = prettijson(j)
         except Exception as e:
-            logging.error(f"Request was invalid JSON: {e}\n"])
+            logging.error(f"Request was invalid JSON: {e}\n")
             return func.HttpResponse(
                 "Request was invalid JSON\n",
                 status_code=400
